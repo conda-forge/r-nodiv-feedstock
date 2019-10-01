@@ -118,4 +118,3 @@ Feedstock Maintainers
 
 * [@conda-forge/r](https://github.com/conda-forge/r/)
 * [@jenzopr](https://github.com/jenzopr/)
-
