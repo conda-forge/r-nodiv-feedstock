@@ -1,4 +1,4 @@
-{% set version = '1.3.0' %}
+{% set version = "1.4.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/nodiv_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/nodiv/nodiv_{{ version }}.tar.gz
-  sha256: 03e8674619d95b7c4175520c57da95078f56cb207a5a8649fab93c7a5dc31dfc
+  sha256: accffb5f1f6a724f19c5c57ce17812e67494c89fd356d6bf1ebcbf1a5acaf7cc
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -46,16 +46,10 @@ test:
 about:
   home: https://github.com/mkborregaard/nodiv
   license: MIT
-  summary: 'An implementation of the nodiv algorithm, see Borregaard, M.K., Rahbek, C., Fjeldsaa,
-    J., Parra, J.L., Whittaker, R.J. & Graham, C.H. 2014. Node-based analysis of species
-    distributions. Methods in Ecology and Evolution 5(11): 1225-1235. <DOI:10.1111/2041-210X.12283>.
-    Package for phylogenetic analysis of species distributions. The main function goes
-    through each node in the phylogeny, compares the distributions of the two descendant
-    nodes, and compares the result to a null model. This highlights nodes where major
-    distributional divergence have occurred. The distributional divergence for these
-    nodes is mapped using the SOS statistic.'
+  summary: 'An implementation of the nodiv algorithm, see Borregaard, M.K., Rahbek, C., Fjeldsaa, J., Parra, J.L., Whittaker, R.J. & Graham, C.H. 2014. Node-based analysis of species distributions. Methods in Ecology and Evolution 5(11): 1225-1235. <DOI:10.1111/2041-210X.12283>. Package for phylogenetic analysis of species
+    distributions. The main function goes through each node in the phylogeny, compares the distributions of the two descendant nodes, and compares the result to a null model. This highlights nodes where major distributional divergence have occurred. The distributional divergence for these nodes is mapped using the SOS statistic.'
   license_family: MIT
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
 
 extra:
   recipe-maintainers:
