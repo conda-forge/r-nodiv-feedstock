@@ -1,4 +1,4 @@
-{% set version = "1.4.0" %}
+{% set version = "1.4.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/nodiv_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/nodiv/nodiv_{{ version }}.tar.gz
-  sha256: accffb5f1f6a724f19c5c57ce17812e67494c89fd356d6bf1ebcbf1a5acaf7cc
+  sha256: e276fa4ac4a600ccba692a1a8680b317ef076d67358042ca55dc0ea0e9d53e17
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
