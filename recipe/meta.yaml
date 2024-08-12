@@ -1,6 +1,5 @@
 {% set version = "1.4.2" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-nodiv
@@ -13,8 +12,7 @@ source:
   sha256: a0533c32bb891654c5e7d9a5eea660f051e7ce266ef3ba468d923b76acf5e2fb
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   noarch: generic
   rpaths:
     - lib/R/lib/
