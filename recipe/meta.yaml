@@ -1,4 +1,4 @@
-{% set version = "1.4.2" %}
+{% set version = "1.4.3" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/nodiv_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/nodiv/nodiv_{{ version }}.tar.gz
-  sha256: a0533c32bb891654c5e7d9a5eea660f051e7ce266ef3ba468d923b76acf5e2fb
+  sha256: 87344ba0392d16345b1e34d65cb887fe0de14ffbeb2d21282869d948f56ead6a
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
